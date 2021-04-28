@@ -13,6 +13,7 @@ open class JZColumnHeader: UICollectionReusableView {
 
     public var lblDay = UILabel()
     public var lblWeekday = UILabel()
+    public var lblPoint = UIView()
     let calendarCurrent = Calendar.current
     public var dateFormatter = DateFormatter()
 
@@ -38,6 +39,14 @@ open class JZColumnHeader: UICollectionReusableView {
         lblWeekday.textAlignment = .center
         lblDay.font = UIFont.init(name: "DINAlternate-Bold", size: 24)
         lblWeekday.font = UIFont.systemFont(ofSize: 13)
+        
+        lblPoint.backgroundColor = .gray
+        lblPoint.layer.cornerRadius = 3
+        addSubview(lblPoint)
+        let left = (UIScreen.main.bounds.width - 70) / 3
+        lblPoint.setAnchorConstraintsEqualTo(widthAnchor: 6, heightAnchor: 6, bottomAnchor: (bottomAnchor, -5), leadingAnchor: (leadingAnchor, left * 0.5 - 3))
+        
+        
     }
 
     public func updateView(date: Date) {
