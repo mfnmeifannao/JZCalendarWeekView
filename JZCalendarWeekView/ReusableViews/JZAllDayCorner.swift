@@ -16,7 +16,7 @@ open class JZAllDayCorner: UICollectionReusableView {
         super.init(frame: frame)
 
         setupUI()
-        setupBottomDivider()
+//        setupBottomDivider()
     }
 
     open func setupUI() {
