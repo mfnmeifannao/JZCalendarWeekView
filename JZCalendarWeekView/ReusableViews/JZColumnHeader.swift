@@ -26,7 +26,7 @@ open class JZColumnHeader: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setupUI() {
+    open func setupUI() {
         // Hide all content when colum header height equals 0
         self.clipsToBounds = true
         let stackView = UIStackView(arrangedSubviews: [lblDay, lblWeekday])
