@@ -29,15 +29,15 @@ open class JZColumnHeader: UICollectionReusableView {
     private func setupUI() {
         // Hide all content when colum header height equals 0
         self.clipsToBounds = true
-        let stackView = UIStackView(arrangedSubviews: [lblWeekday, lblDay])
+        let stackView = UIStackView(arrangedSubviews: [lblDay, lblWeekday])
         stackView.axis = .vertical
         stackView.spacing = 2
         addSubview(stackView)
         stackView.setAnchorConstraintsEqualTo(centerXAnchor: centerXAnchor, centerYAnchor: centerYAnchor)
         lblDay.textAlignment = .center
         lblWeekday.textAlignment = .center
-        lblDay.font = UIFont.systemFont(ofSize: 17)
-        lblWeekday.font = UIFont.systemFont(ofSize: 12)
+        lblDay.font = UIFont.init(name: "DINAlternate-Bold", size: 24)
+        lblWeekday.font = UIFont.systemFont(ofSize: 13)
     }
 
     public func updateView(date: Date) {

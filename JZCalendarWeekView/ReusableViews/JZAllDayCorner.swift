@@ -23,11 +23,11 @@ open class JZAllDayCorner: UICollectionReusableView {
         self.backgroundColor = .white
         self.clipsToBounds = true
         self.addSubview(lblTitle)
-        lblTitle.text = "all-day"
+        lblTitle.text = "全天"
         lblTitle.textColor = JZWeekViewColors.allDayHeader
         lblTitle.font = UIFont.systemFont(ofSize: 12)
         // Support iPhone X Landscape state (same as JZRowHeader)
-        lblTitle.setAnchorCenterVerticallyTo(view: self, trailingAnchor: (self.trailingAnchor, -2))
+        lblTitle.setAnchorCenterVerticallyTo(view: self, trailingAnchor: (self.trailingAnchor, -22))
     }
 
     open func setupBottomDivider() {
