@@ -36,7 +36,8 @@ open class JZWeekViewFlowLayout: UICollectionViewFlowLayout {
     open var defaultHourGridDivision: JZHourGridDivision { return .noneDiv }
     // You can change following constants
     open var defaultGridThickness: CGFloat { return 0.5 }
-    open var defaultCurrentTimeLineHeight: CGFloat { return 10 }
+//    open var defaultCurrentTimeLineHeight: CGFloat { return 10 }
+    open var defaultCurrentTimeLineHeight: CGFloat { return UIScreen.main.bounds.height }
     open var defaultAllDayOneLineHeight: CGFloat { return 35 }
     /// Margin for the flowLayout in collectionView
     open var contentsMargin: UIEdgeInsets { return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0) }
@@ -798,7 +799,8 @@ open class JZWeekViewFlowLayout: UICollectionViewFlowLayout {
         case JZDecorationViewKinds.columnHeaderBackground:
             return minOverlayZ + 4
         case JZSupplementaryViewKinds.currentTimeline:
-            return minOverlayZ + 3
+//            return minOverlayZ + 3
+            return minCellZ - 1
         case JZDecorationViewKinds.horizontalGridline:
             return minBackgroundZ + 2
         case JZDecorationViewKinds.verticalGridline:
